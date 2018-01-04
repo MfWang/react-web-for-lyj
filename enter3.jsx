@@ -9,6 +9,7 @@ import A from './pages/a/index.jsx';
 import B from './pages/b/index.jsx';
 import C from './pages/c/index.jsx';
 import CDetail from './pages/c/detail.jsx'
+import Home from './pages/home/index.jsx';
 
 class Enter extends React.Component {    
     render() {        
@@ -23,27 +24,29 @@ class Enter extends React.Component {
 }
 
 ReactDom.render(
-    // <Router history={hashHistory}>
-    //     <Route path="/" component={Enter} breadcrumbName="首页" ></Route>
-    //     <Route path="/a" breadcrumbName="a" component={A} />
-    //     <Route path="/b" breadcrumbName="b" component={B} />
-    //     <Route path="/c" breadcrumbName="主页">
-    //         <IndexRoute component={C} breadcrumbName="C" />
-    //         <Route path="/c/detail" breadcrumbName="C详情页" component={CDetail} />
-    //     </Route>
-    //     <Route exact path="/cdetail/" breadcrumbName="a" component={CDetail} />
-    //     {/* exact 要求路由严格匹配 */}
-    // </Router>
     <Router history={hashHistory}>
-        <Route path="/" component={Enter} breadcrumbName="首页" >
-            <Route path="/a" breadcrumbName="a" component={A} />
-            <Route path="/b" breadcrumbName="b" component={B} />
-            <Route path="/c" breadcrumbName="C">
-                <IndexRoute component={C} breadcrumbName="C" />
-                <Route path="/c/detail" breadcrumbName="C详情页" component={CDetail} />
-            </Route>
+        <Route path="/" component={Enter} breadcrumbName="首页" ></Route>
+        <Route path="/home" breadcrumbName="a" component={Home} />
+        <Route path="/a" breadcrumbName="a" component={A} />
+        <Route path="/b" breadcrumbName="b" component={B} />
+        <Route path="/c" breadcrumbName="主页">
+            <IndexRoute component={C} breadcrumbName="C" />
+            <Route path="/c/detail" breadcrumbName="C详情页" component={CDetail} />
         </Route>
+        <Route exact path="/cdetail/" breadcrumbName="a" component={CDetail} />
+        {/* exact 要求路由严格匹配 */}
     </Router>
+    // <Router history={hashHistory}>
+    //     <Route path="/" component={Enter} breadcrumbName="首页" >
+    //         <Route path="/home" breadcrumbName="a" component={Home} />
+    //         <Route path="/a" breadcrumbName="a" component={A} />
+    //         <Route path="/b" breadcrumbName="b" component={B} />
+    //         <Route path="/c" breadcrumbName="C">
+    //             <IndexRoute component={C} breadcrumbName="C" />
+    //             <Route path="/c/detail" breadcrumbName="C详情页" component={CDetail} />
+    //         </Route>
+    //     </Route>
+    // </Router>
     ,    
     document.getElementById('content')
 );

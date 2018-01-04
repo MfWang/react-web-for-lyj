@@ -1,0 +1,348 @@
+@import '../app.scss';
+header{
+    width: 100%;
+    height: 200px;
+    background: rgba(0,0,0,0.3) url('http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/04/01/a8e8afe94d0e1e912643537ad60dc540.jpg') no-repeat center / cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 20px;
+    position: relative;
+    .info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.6);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 20px;
+        h1{
+            color: #222;
+            opacity: 0.5;
+        }
+        .user{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                display: block;
+                border-radius: 100%;
+                background: red;
+                margin-right: 20px;
+            }
+            button{
+                background: transparent;
+                border: none;
+                color: red;
+                font-size: 16px;
+            }
+        }
+    }
+    .search_block{
+        .ranking_list{
+            color: #fff;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            background: rgba(255,255,255,0.6);
+            border: none;
+        }
+        .search{
+            width: 50px;
+            height: 30px;
+            border: none;
+        }
+    }
+}
+main{
+    margin-top: 10px;
+    .theme{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .slide{
+            width: 400px;
+            height: 210px;
+            border: 1px solid #000;
+            .slide_item{
+                display: block;
+                position: relative;
+                width: 400px;
+                height: 210px;
+                img{
+                    width: 400px;
+                    height: 210px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+                p{
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.3);
+                    color: #fff;
+                    z-index: 3;
+                    padding: 5px 10px;
+                }
+            }
+            .slick-dots{
+                bottom: 30px;
+                li{
+                  margin: 0 10px 0 0;
+                  position: relative;
+                  &:after{
+                      content: '';
+                        background: #F67B9A;
+                  }
+                  &.slick-active{
+                      button{
+                        background: red;
+                      }
+                    
+                  }
+                  button{
+                    background: #F67B9A;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    &:before{
+                      font-size: 0 !important;
+                    }
+                  }
+                }
+            }
+        }
+        .theme_lists{
+            width: 630px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            .item{
+                width: 200px;
+                height: 100px;
+                border: 1px solid #000;
+                margin-left: 10px;
+                position: relative;
+                background: url('https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3074270791,1668949833&fm=58&s=7D84F91BB4BAAE214A1E2BEC0300702E&bpow=121&bpoh=75') no-repeat center / cover;
+                &.group{
+                    margin-bottom: 10px;
+                }
+                p{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.4);
+                    color: #fff;
+                    padding: 5px 10px;
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .category{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+        .menu{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 20px;
+            ul{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            li{
+                margin-right: 10px;
+            }
+            button{
+                background: transparent;
+                border: none;
+                color: #000;
+            }
+        }
+        .left{
+            width: 775px;
+            .list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .item{
+                    width: 190px;
+                    height: 100px;
+                    border: 1px solid #000;
+                    margin-bottom: 65px;
+                    display: block;
+                    position: relative;
+                    background: url('https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3074270791,1668949833&fm=58&s=7D84F91BB4BAAE214A1E2BEC0300702E&bpow=121&bpoh=75') no-repeat center / cover;
+                    .item_info{
+                        position: absolute;
+                        top: 100px;
+                        left: 0;
+                    }
+                    p{
+                        width: 190px;
+                        font-size: 14px;
+                        color: #000;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .slick-dots{
+                top: -69px;
+                height: 50px;
+                display: flex !important;
+                align-items: center;
+                padding-left: 60px;
+                background: url('http://www.w3school.com.cn/ui2017/compatible_chrome.png') no-repeat center left / contain;
+                li{
+                    width: auto;
+                    margin: 0 10px 0 0;
+                    position: relative;
+                    &:after{
+                        padding: 0 7px;
+                    }
+                    &:nth-child(1){
+                        &:after{
+                            content: '影视';
+                        }
+                    }
+                    &:nth-child(2){
+                        &:after{
+                            content: '最新热门巴士';
+                        }
+                    }
+                    &:nth-child(3){
+                        &:after{
+                            content: '最新巴士';
+                        }
+                    }
+                    &.slick-active:before{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid #00a1d6;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &.slick-active:after{
+                        color: #00a1d6;
+                        border-bottom: 2px solid #00a1d6;
+                        padding-bottom: 8px;
+                    }
+                    button{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        &:before{
+                            content: '';
+                            font-size: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .hot{
+            width: 275px;
+            .title{
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            li {
+                &:nth-child(1) span{
+                    background: pink;
+                }
+                &:nth-child(2) span{
+                    background: pink;
+                }
+                &:nth-child(3) span{
+                    background: pink;
+                }
+            }
+            li:nth-child(1) {
+                p{
+                    width: 100px;
+                    overflow:hidden; 
+                    text-overflow:ellipsis;
+                    display:-webkit-box; 
+                    -webkit-box-orient:vertical;
+                    -webkit-line-clamp:2; 
+                    white-space: normal;
+                }
+                .item{
+                    align-items: flex-start;
+                }
+            }
+            .item{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 15px;
+                span{
+                    background: #b8c0cc;
+                    color: #fff;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 12px;
+                    border-radius: 5px;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-right: 5px;
+                }
+                img{
+                    width: 100px;
+                    height: 50px;
+                    border: 1px solid #000;
+                    display: block;
+                    margin-right: 5px;
+                }
+                p{
+                    width: 230px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            button{
+                width: 100%;
+                height: 24px;
+                background: #e5e9ef;
+                border: none;
+                color: #222;
+                border-radius: 4px;
+                font-size: 12px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+            button:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
