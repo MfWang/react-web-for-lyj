@@ -31,6 +31,8 @@ ReactDom.render(
     //         <IndexRoute component={C} breadcrumbName="C" />
     //         <Route path="/c/detail" breadcrumbName="C详情页" component={CDetail} />
     //     </Route>
+    //     <Route exact path="/cdetail/" breadcrumbName="a" component={CDetail} />
+    //     {/* exact 要求路由严格匹配 */}
     // </Router>
     <Router history={hashHistory}>
         <Route path="/" component={Enter} breadcrumbName="首页" >
